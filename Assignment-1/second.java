@@ -5,6 +5,21 @@
  */
 import java.util.Scanner;
 class Second{
+    static Double add(Double a,Double b){
+      return a+b;
+    }
+    static Double sub(Double a,Double b){
+      return a-b;
+    }
+    static Double mul(Double a,Double b){
+      return a*b;
+    }
+    static Double div(Double a,Double b){
+      return a/b;
+    }
+    static Double mod(Double a,Double b){
+      return a%b;
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         char operator;
@@ -21,26 +36,30 @@ class Second{
 
             // performs addition between numbers
             case '+':
-              result = a + b;
+              result = add(a,b);
               System.out.println(a + " + " + b + " = " + result);
               break;
       
             // performs subtraction between numbers
             case '-':
-              result = a - b;
+              result = sub(a,b);
               System.out.println(a + " - " + b + " = " + result);
               break;
       
             // performs multiplication between numbers
             case '*':
-              result = a * b;
+              result = mul(a,b);
               System.out.println(a + " * " + b + " = " + result);
               break;
       
             // performs division between numbers
             case '/':
-              result = a / b;
+              result = div(a,b);
               System.out.println(a + " / " + b + " = " + result);
+              break;
+            case '%':
+              result = mod(a,b);
+              System.out.println(a + " % " + b + " = " + result);
               break;
       
             default:
